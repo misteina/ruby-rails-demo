@@ -1,0 +1,287 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #4c4c4c;
+}
+select{
+    background-color: white;
+}
+#app{
+    display: inline-block;
+    width: 100%;
+}
+#home{
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    display: inline-block;
+}
+#intro{
+    font-weight: bold;
+    font-size: 20px;
+}
+#searchbox{
+    height: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+#error{
+    width: 290px;
+    margin: auto;
+    color: red;
+    font-size: 14px;
+}
+#find{
+    width: 50vw;
+    max-width: 500px;
+    min-width: 300px;
+    height: 48px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+#signupform, #signinform{
+    width: 300px;
+    margin: auto;
+}
+#error_explanation{
+    color: red;
+    font-size: 13px;
+    text-align: left;
+}
+#searchbutt{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-color: white;
+    border: none;
+    background-image: url('/img/find.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+#options{
+    font-size: 16px;
+}
+#login{
+    width: 50%;
+    margin: 200px auto;
+    display: block;
+    text-align: center;
+}
+#signup{
+    width: 50%;
+    margin: 100px auto;
+    display: block;
+    text-align: center;
+}
+#register_sex{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.input{
+    width: 95%;
+    height: 40px;
+    margin-bottom: 5px;
+    padding-left: 5%;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+#button{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: #abcedc;
+}
+#title{
+    margin-bottom: 10px;
+}
+#menubar{
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+#details{
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 0;
+    border: 1px solid #c3c3c3;
+}
+#details span{
+    font-size: 15px;
+    color: #444444;
+}
+#addform{
+
+    margin-top: 10px;
+}
+#textarea{
+    width: 200px;
+    height: 58px;
+    padding: 5px;
+    resize: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+#subint{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+}
+#noint{
+    color: grey;
+    margin-bottom: 10px;
+}
+#avatar{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    background-image: url(/img/user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    border: 1px solid #dadada;
+}
+#nage{
+    color: #545454;
+    margin-top: 10px;
+}
+#nage span{
+    font-family: arial;
+    font-weight: bold;
+}
+#interests{
+    width: 95%;
+    max-width: 560px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 20px;
+    border: 1px solid #c3c3c3;
+}
+#interests span{
+    font-family: arial;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.int{
+    display: inline-block;
+    padding: 10px;
+    font-size: 13px;
+    color: #5d5d5d;
+    margin-right: 5px;
+    border-radius: 20px;
+    border: 1px solid #bfbfbf;
+}
+#add{
+    display: inline-block;
+    width: 20px;
+    padding: 10px;
+    color: black;
+    border-radius: 40px;
+    border: 1px solid #bfbfbf;
+}
+.res{
+    width: 95%;
+    margin: auto;
+    padding: 15px 0;
+    max-width: 600px;
+    border-bottom: 1px solid #ececec;
+}
+.sava{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    border-radius: 100%;
+    border: 1px solid #b3b1b1;
+    background-image: url(/img/user.svg);
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: center;
+}
+#msgicon{
+    width: 25px;
+    margin: 10px auto 0;
+    height: 25px;
+    background-image: url(/img/chat.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#notfound{
+    text-align: center;
+}
+#nores{
+    width: 32vw;
+    font-size: 15px;
+    text-align: center;
+    margin: 50px auto 0;
+}
+#err404{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: grey;
+}
+#pnf{
+    font-size: 15px;
+    color: #333333;
+}
+.name{
+    font-family: arial;
+    font-weight: bold;
+    color: #4e4e4e;
+}
+.sex{
+    font-size: 14px;
+    color: grey;
+}
+.location{
+    font-size: 14px;
+}
+.pdet{
+    display: inline-block;
+}
+#sform{
+    margin-bottom: 10px;
+    text-align: center;
+}
+#find2{
+    width: 50vw;
+    min-width: 300px;
+    max-width: 400px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+#searchbox2{
+    display: inline-block;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #a7a4a4;
+}
