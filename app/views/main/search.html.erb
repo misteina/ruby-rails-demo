@@ -1,0 +1,33 @@
+<div id="search">
+    <div id="menubar">
+        <% if session.key?(:uid) %>
+            <a href="/profile/<%= session[:uid] %>">Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/logout">Log Out</a>
+        <%  else %>
+            <a href="/login">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/signup">Sign Up</a>
+        <% end %>
+    </div>
+    <form id="sform" action="search" method="GET">
+        <div id="searchbox2">
+            <input type="text" name="q" maxlength="20" id="find2" placeholder="Search Your Interest" value="<%= params[:q] %>">
+            <input type="submit" id="searchbutt" value="">
+        </div>
+    </form>
+    <% if @data[:result].length > 0 %>
+        <% @data[:result].each do |profile| %>
+            <a href="/profile/<%= session[:uid] %>">
+                <div class="res">
+                    <div class="sava"></div>
+                    <div class="pdet">
+                        <div class="name"><%= profile['name'] %></div>
+                        <div class="sex"><%= profile['sex'] %></div>
+                        <div class="location"><%= profile['city'] %></div>
+                    </div>
+                </div>
+            </a>
+        <% end %>
+    <%  else  %>
+        <div id="nores">
+            No results found. :-)
+        </div>
+    <% end %>
+</div>
