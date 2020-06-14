@@ -1,0 +1,7 @@
+<div id="menubar">
+    <% if defined?session[:uid] %>
+        <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/logout">Log Out</a>
+    <% else %>
+        <a href="/login">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/signup">Sign Up</a>
+    <% end %>
+</div>
