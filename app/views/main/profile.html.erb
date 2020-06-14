@@ -1,0 +1,33 @@
+<div id="profile">
+    <%= render "/main/menubar" %>
+    <div id="details">
+        <div id="avatar"></div>
+        <div id="nage"><span><%= @data[:user][0].name %></span>, <%= @data[:user][0].sex %></div>
+        <span><%= @data[:user][0].city %></span>
+        <div id="msgicon"></div>
+    </div>
+    <div id="interests">
+        <span>INTERESTS</span>
+        <% if @data[:user][0].interests.length == 0 %>
+            <div id="noint">No interests added yet</div>
+        <% else %>
+            <% @data[:user][0].interests.split(',').each do |value| %>
+                <% if value.length > 0 %>
+                    <div class="int"><%= value %></div>
+                <% end %>
+            <% end %>
+        <% end %>
+        <% if @data[:user][0].name.downcase == session[:uid] %>
+            <div id="add">&#10010;</div>
+            <div id="addform" style="display: none;">
+                <% if defined?@data[:error] %>
+                    <div id="error"><%= @data[:error] %></div>
+                <% end %>
+                <%= form_with url: '/interests', local: true do %>
+                    <textarea name="intrs" id="textarea" placeholder="Enter your interests"></textarea><br>
+                    <input type="submit" id="subint" value="SUBMIT">
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
