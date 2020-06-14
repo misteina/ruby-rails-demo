@@ -1,0 +1,11 @@
+<div id="login">
+    <div id="title">SIGN IN</div>
+    <%= form_with scope: :login, url: '/signin', id: 'signinform', local: true do |form| %>
+        <% if defined?@data[:error] %>
+            <div id="error"><%= @data[:error] %></div>
+        <% end %>
+        <%= form.email_field :email, placeholder: "Email", class: "input" %><br>
+        <%= form.password_field :password, placeholder: "Password", class: "input" %><br>
+        <%= form.submit value: "SIGN IN", id: "button" %>
+    <% end %>
+</div>
