@@ -1,0 +1,23 @@
+<div id="signup">
+    <div id="title">SIGN UP</div>
+    <%= form_with scope: :register, url: '/signup', id: 'signupform', local: true do |form| %>
+        <% if @data[:model] != nil %>
+            <% if @data[:model].errors.any? %>
+                <div id="error_explanation">
+                    <ul>
+                    <% @data[:model].errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                </div>
+            <% end %>
+        <% end %>
+        <%= form.text_field :name, placeholder: "Name", class: "input" %><br>
+        <%= form.email_field :email, placeholder: "Email", class: "input" %><br>
+        <%= form.select :sex, options_for_select([['Choose Sex', ''], ['Male', 'Male'], ['Female', 'Female']], '') %><br>
+        <%= form.text_field :city, placeholder: "City", class: "input" %><br>
+        <%= form.password_field :password, placeholder: "Password", class: "input" %><br>
+        <%= form.password_field :password_confirmation, placeholder: "Verify Password", class: "input" %><br>
+        <%= form.submit value: "SIGN UP", id: "button" %>
+    <% end %>
+</div>
